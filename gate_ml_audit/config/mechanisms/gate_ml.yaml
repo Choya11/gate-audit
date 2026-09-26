@@ -1,0 +1,5 @@
+name: gate_ml
+status: implemented
+tau_l: 0.15
+window: 50
+beta: 0.9

@@ -1,0 +1,24 @@
+device: cpu
+data_source: synthetic
+seed_list: [0, 1, 2]
+batch_size_ceiling: 32
+total_steps: 2000
+logging:
+  jsonl_dir: ./logs
+  mirror_to_wandb: false
+checkpointing:
+  periodic_interval_steps: 500
+  periodic_retain: 2
+model:
+  d_model: 256
+  n_layers: 4
+  n_heads: 4
+  vocab_size: 8000
+  max_seq_len: 128
+eval:
+  cadence_steps: 200
+optimizer:
+  name: adamw
+  lr: 0.0003
+  weight_decay: 0.01
+  warmup_steps: 100
